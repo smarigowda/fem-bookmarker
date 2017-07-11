@@ -9,7 +9,7 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({ 
     width: 300,
     height:600,
-    titleBarStyle: 'hidden-inset',
+    // titleBarStyle: 'hidden-inset',
     show: false
   });
 
