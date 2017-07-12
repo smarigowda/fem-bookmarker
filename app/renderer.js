@@ -10,4 +10,7 @@ newLinkForm.addEventListener('submit', () => {
   event.preventDefault();
   const url = newLinkUrl.value;
   console.log(url);
+  fetch(url)
+    .then(response => response.text())
+    .then(console.log);
 });
