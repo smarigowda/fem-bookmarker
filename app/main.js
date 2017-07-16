@@ -1,6 +1,6 @@
 const electron = require('electron');
 // console.log(Object.keys(electron));
-let { app, BrowserWindow } = electron;
+const { app, BrowserWindow } = electron;
 
 let mainWindow = null;
 
