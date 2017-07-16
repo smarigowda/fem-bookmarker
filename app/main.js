@@ -6,6 +6,7 @@ let mainWindow = null;
 
 app.on('ready', () => {
   console.log('The application is ready');
+  debugger;
   mainWindow = new BrowserWindow({ 
     width: 300,
     height:600,
