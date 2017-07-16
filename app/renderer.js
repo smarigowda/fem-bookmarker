@@ -1,3 +1,5 @@
+const { shell } = require('electron');
+
 const newLinkUrl = document.querySelector('#new-link-url');
 const newLinkSubmit = document.querySelector('.new-link-form--submit');
 const newLinkForm = document.querySelector('.new-link-form');
@@ -6,6 +8,15 @@ const linksSection = document.querySelector('.links');
 
 newLinkUrl.addEventListener('keyup', () => {
   newLinkSubmit.disabled = !newLinkUrl.validity.valid;
+});
+
+linksSection.addEventListener('click', (event) => {
+  console.log('click event triggered...');
+  console.log(event.target.href);
+  if(event.target.href) {
+    event.preventDefault();
+    shell.openExternal(event.target.href);
+  }
 });
 
 const parser = new DOMParser();
@@ -20,7 +31,7 @@ const addToPage = ({ title, url }) => {
   urlElement.href = url;
   urlElement.textContent = url;
   linksSection.appendChild(newLink);
-  return ({ url, element });
+  return ({ url, title });
 };
 
 newLinkForm.addEventListener('submit', () => {
