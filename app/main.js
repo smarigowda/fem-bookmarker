@@ -23,7 +23,7 @@ app.on('ready', () => {
 
   mainWindow.loadURL(`file://${__dirname}/index.html`);
   // mainWindow.loadURL('https://github.com');
-
+  require('devtron').install();
 });
 
 console.log('Hello World!');
