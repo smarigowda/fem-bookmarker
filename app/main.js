@@ -8,8 +8,8 @@ app.on('ready', () => {
   console.log('The application is ready');
   debugger;
   mainWindow = new BrowserWindow({ 
-    width: 300,
-    height:600,
+    // width: 300,
+    // height:600,
     // titleBarStyle: 'hidden-inset',
     show: false
   });
